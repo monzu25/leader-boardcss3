@@ -93,11 +93,26 @@ Top Blog Styles
 /* Latest Courses */
 
 .courses{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap:24px;
+   
 
 }
+
+
+.course{
+    box-shadow:0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .course-info{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .courses .course-banner img{
@@ -114,3 +129,46 @@ Top Blog Styles
     color : #AEAEAE;
     font-size: 12px;
 }
+.course-duration{
+    background-color: #FF4A60;
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    width: 85px;
+}
+
+
+/*----------------------------*/
+      /*All Devices Media Query/*
+/* ---------------------------- */
+
+/* Mobile Devices */
+@media only screen and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1,1fr);
+        padding: 30px;
+    }
+    .blog{
+        flex-direction: column;
+    }
+    
+
+}
+
+@media only screen and (min-width: 688px) and (max-width: 992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(2,1fr);
+        padding: 30px;
+    }
+   
+    
+
+}
+
